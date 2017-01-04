@@ -28,10 +28,32 @@ var songCreate = function() {
 	});
 };
 
+var lucySongs = [
+    {
+        title: "O sole mio",
+        duration: "3:21",
+        date_of_release: "1990",
+        album_title: "Three Tenors in Concert"
+    },
+    {
+        title: "Nessun dorma",
+        duration: "3:21",
+        date_of_release: "1990",
+        album_title: "Three Tenors in Concert"
+    }
+];
+
 artistCreate()
 .then(managerCreate)
 .then(songCreate)
-.then(function() {
-	process.exit();
+// Addedd by us...
+.then(function(artist) {
+	lucySongs.forEach(function(song) {
+		song.artistId = artist.id;
+	});
+	DB.Song.bulkCreate(lucySongs);
 });
+// .then(function() {
+// 	process.exit();
+// });
 
