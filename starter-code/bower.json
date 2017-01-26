@@ -1,0 +1,21 @@
+{
+  "name": "solution-code",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "gliechty <guy.liechty@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/gliechty/tunr-relationships",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "bootstrap-css-only": "^3.3.7"
+  }
+}

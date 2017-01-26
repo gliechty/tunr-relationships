@@ -1,7 +1,7 @@
 //Connect
 var Sequelize = require('sequelize');
 
-var sequelize = new Sequelize('postgres://erikisaac@localhost:5432/tunr_relationships');
+var sequelize = new Sequelize('postgres://guyliechty@localhost:5432/tunr_relationships');
 
 //Export models and Sequelize for seed and dbSetup
 module.exports.Sequelize = Sequelize;
@@ -11,9 +11,13 @@ var Artist = sequelize.import("./artist");
 var Manager = sequelize.import("./manager");
 var Song = sequelize.import("./song");
 
+
 // Added by us...
 Song.belongsTo(Artist);
 Artist.hasMany(Song);
+
+Artist.belongsTo(Manager);
+Manager.hasMany(Artist);
 
 module.exports.models = {
 	Artist: Artist,
