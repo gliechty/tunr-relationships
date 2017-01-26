@@ -11,7 +11,7 @@ function index(req, res) {
 
 function show(req, res) {
   Artist.findById(req.params.id, {
-    include: Song, Manager
+    include: Song
   })
   .then(function(artist){
     if(!artist) return error(res, "not found");

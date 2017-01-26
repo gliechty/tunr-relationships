@@ -5,17 +5,6 @@ module.exports = function(sequelize, Sequelize){
     nationality: Sequelize.STRING,
     instrument: Sequelize.STRING,
     home_address: Sequelize.STRING
-  }//,
-  // {
-  //   instanceMethods: {
-  //     shout: function(){
-  //       console.log("My name is " + this.name);
-  //     }
-  //   }
-  // }
-  );
-  // model.sing = function(){
-  //   console.log("Tra la la!");
-  // };
+  });
   return model;
 };
